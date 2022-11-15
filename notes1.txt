@@ -1,0 +1,19 @@
+A flex container is any element that has 'display: flex;'.
+
+A flex item is any element that lives directly inside of a flex container.
+
+<div class="container">
+    <div class="item"></div>
+</div>
+
+.container {
+    display: flex;
+}
+
+.item {
+    flex: 1;
+    // display: flex; //
+}
+
+You can also put 'display: flex;' on a flex item and 
+then use flexbox to arrange its children
