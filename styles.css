@@ -51,15 +51,18 @@ Navigation Bar Layout
 
 .container {
     max-width: 75%;
+    padding: 1em;
     margin: auto;
     display: flex;
     align-items: center;
 }
 
+
 .container ul li {
     padding: .2em;
     margin: .2em;
     display: inline-block;
+    transition: 1s;
 }
 
 .item {
@@ -71,10 +74,22 @@ Navigation Bar Layout
 
 
 /* =================================================
-
+Media Queries 
 ==================================================== */
 
-
+@media (max-width: 767px) { 
+    .container {
+        text-align: center;
+        display: block;
+    }
+    .container h1 {
+        margin: .5em;
+    }
+    .container ul li {
+        padding: .5em;
+        display: block;
+    }
+}
 
 /* =================================================
 ==================================================== */
