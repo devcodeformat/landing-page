@@ -27,19 +27,59 @@ html {
 
 .navbar {
     background-color: #1F2937;
+    border-bottom: solid #82b1fc;
 }
 
-.container h1 {
+.container-nav h1 {
     color: #F9FAF8;
     font-size: 24px;
+    transition: 1s;
 }
 
-.container ul li {
+.container-nav h1:hover {
+    color: #b7d3ff;
+}
+
+.container-nav ul li {
     color: #E5E7EB;
     font-size: 18px;
+    border-bottom: solid #82b1fc;
+}
+
+.container-nav ul li:hover {
+    color: #a2a4a7;
+    border-bottom: solid #dbe8fd;
 }
 
 /* /Navigation Bar */
+
+/* Main Section */
+.container-main {
+    background-color: #1F2937;
+}
+
+.item-main-text h3 {
+    color: #F9FAF8;
+    font-size: 1.5em;
+}
+
+.item-main-text p {
+    color: #E5E7EB;
+    font-size: 1em;
+}
+
+.item-main-text button {
+    color: #F9FAF8;
+    border-radius: 25%;
+    background-color: #3882F6;
+}
+
+.item-main-text button:hover {
+    background-color: #82b1fc;
+    transition: 1s;
+}
+
+/* /Main Section */
 
 /* =================================================
 ==================================================== */
@@ -49,7 +89,7 @@ html {
 Navigation Bar Layout
 ==================================================== */
 
-.container {
+.container-nav {
     max-width: 75%;
     padding: 1em;
     margin: auto;
@@ -58,15 +98,65 @@ Navigation Bar Layout
 }
 
 
-.container ul li {
+.container-nav ul li {
     padding: .2em;
     margin: .2em;
     display: inline-block;
     transition: 1s;
 }
 
-.item {
+.item-nav {
     flex: 1;
+}
+
+/* =================================================
+==================================================== */
+
+
+/* =================================================
+Main Section
+==================================================== */
+
+.container-main {
+    max-width: 100%;
+    padding: 5%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-main-text {
+    max-width: 40%;
+    flex: 1;
+    transition: 1s;
+}
+
+.item-main-text h3 {
+    padding: 1em;
+}
+
+.item-main-text p {
+    padding: 1em;
+}
+
+.item-main-text button {
+    margin: 1em;
+    padding-left: .8em;
+    padding-right: .8em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+ 
+.item-main-img {
+    max-width: 40%;
+    text-align: center;
+    flex: 1;
+    transition: 1s;
+}
+
+.item-main-img img {
+    max-width: 100%;
 }
 
 /* =================================================
@@ -78,17 +168,30 @@ Media Queries
 ==================================================== */
 
 @media (max-width: 767px) { 
-    .container {
+    .container-nav {
         text-align: center;
         display: block;
     }
-    .container h1 {
+    .container-nav h1 {
         margin: .5em;
     }
-    .container ul li {
+    .container-nav ul li {
         padding: .5em;
         display: block;
     }
+
+    .container-main {
+        text-align: center;
+        display: block;
+    }
+
+    .item-main-text,
+    .item-main-img {
+        max-width: 85%;
+        margin: auto;
+        text-align: center;
+    }
+
 }
 
 /* =================================================
